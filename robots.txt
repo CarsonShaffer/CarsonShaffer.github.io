@@ -83,11 +83,12 @@ User-agent: YouBot
 Disallow: /
 
 User-agent: *
+Allow: /images/carson-shaffer.jpeg
+Allow: /images/favicon.ico
 Disallow: /images/
 Disallow: /links.html
 Disallow: /certs.html
 Disallow: /resume/carson-shaffer-resume.pdf
 Disallow: /README.md
 
-Sitemap: https://carsonshaffer.me/sitemap.html
-
+Sitemap: https://carsonshaffer.me/sitemap.xml
