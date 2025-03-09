@@ -4,4 +4,5 @@ The site is hosted using GitHub pages and a custom domain (carsonshaffer.me).
 
 I plan on updating this site infrequently.
 
-Last updated: January 2025
+Last updated: March 2025
+
