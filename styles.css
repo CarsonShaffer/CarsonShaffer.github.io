@@ -8,16 +8,15 @@ body {
   font-family: system-ui, sans-serif;
   font-size: clamp(18px, 1.2vw, 24px);
   line-height: 1.4;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: #121212;
   color: #e0e0e0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .content {
   max-width: 90ch;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 header {
@@ -25,7 +24,7 @@ header {
   flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 0.25rem;
 }
 
 header img {
@@ -39,6 +38,10 @@ header img {
   min-width: 240px;
 }
 
+.info p {
+  margin-bottom: 0.3rem;
+}
+
 h1 {
   margin: 0 0 0.3rem;
   font-size: clamp(1.8rem, 2.5vw, 2.4rem);
@@ -46,7 +49,7 @@ h1 {
 }
 
 h2 {
-  margin-top: 2.5rem;
+  margin: 1.5rem 0 0.5rem;
   font-size: 1.2em;
   color: #ffffff;
   border-bottom: 1px solid #333;
@@ -62,25 +65,38 @@ a:hover {
   text-decoration: underline;
 }
 
-ul {
-  padding-left: 1.2rem;
-  margin-top: 0.5rem;
+.content > p {
+  margin-bottom: 0rem;
 }
 
 .flex-sections {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
-  margin-top: -2rem;
+  gap: 2rem;
+  margin-top: 0rem;
 }
 
 .section-column {
   flex: 1;
   min-width: 300px;
+  margin-top: 0;
+}
+
+.section-column + .section-column {
+  margin-top: 0;
 }
 
 .section-column b {
   display: block;
   margin-top: 1rem;
   margin-bottom: 0.3rem;
+}
+
+ul {
+  margin: 0.25rem 0;
+  padding-left: 1.2rem;
+}
+
+ul li {
+  margin-bottom: 0.2rem;
 }
