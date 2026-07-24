@@ -6,9 +6,204 @@
   <title>Carson Shaffer</title>
   <meta name="description" content="Carson Shaffer — Security Analyst based in Portage, Indiana.">
   <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+:root {
+  --bg: #f4f1ea;
+  --ink: #1a1815;
+  --muted: #6b6359;
+  --rule: #d4ccbc;
+  --accent: #2c4a3c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1815;
+    --ink: #ebe6dd;
+    --muted: #8d8678;
+    --rule: #3d3833;
+    --accent: #8eb39e;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { min-height: 100vh; }
+
+body {
+  font-family: "Iowan Old Style", "Hoefler Text", "Palatino Linotype", Palatino, Cambria, Georgia, serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 40px;
+}
+
+.card {
+  width: 100%;
+  max-width: 1040px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-items: start;
+}
+
+.identity {
+  padding-right: 40px;
+  border-right: 1px solid var(--rule);
+}
+
+.photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(20%) contrast(1.02);
+  margin-bottom: 28px;
+  display: block;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 26px;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--muted);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: color 120ms ease, text-decoration-color 120ms ease;
+}
+a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14.5px;
+  margin-bottom: 32px;
+}
+
+.links { display: flex; flex-direction: column; gap: 8px; }
+.links a {
+  font-size: 15px;
+  width: max-content;
+}
+
+main { padding-left: 48px; }
+
+.bio {
+  font-size: 16px;
+  max-width: 62ch;
+  line-height: 1.55;
+}
+.bio p + p { margin-top: 10px; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 22px 0;
+}
+
+h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+
+.certs .group:first-child { padding-top: 0; }
+.certs .desc { color: var(--muted); }
+
+.proud .title {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+.proud .title a {
+  text-decoration-style: solid;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+}
+.proud .title a:hover { color: var(--accent); }
+.proud .blurb { color: var(--muted); font-size: 15px; max-width: 62ch; line-height: 1.5; }
+
+@media (max-width: 760px) {
+  body {
+    align-items: flex-start;
+    padding: 40px 28px;
+  }
+  .card {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+  .identity {
+    padding-right: 0;
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+  }
+  main { padding-left: 0; }
+  .photo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 22px;
+  }
+  h1 { font-size: 28px; }
+  .subtitle { margin-bottom: 22px; }
+  .contact { margin-bottom: 26px; }
+  hr { margin: 20px 0; }
+}
+
+@media (max-width: 400px) {
+  body { padding: 32px 20px; }
+  .photo { width: 104px; height: 104px; }
+  h1 { font-size: 26px; }
+}
+
+.certs .cert-list {
+  display: table;
+}
+.certs .cert-list p {
+  display: table-row;
+}
+.certs .abbr,
+.certs .desc {
+  display: table-cell;
+}
+.certs .abbr {
+  white-space: nowrap;
+  padding-right: 14px;
+}
+</style>
 <body>
+
   <article class="card">
 
     <aside class="identity">
@@ -42,11 +237,11 @@
         <h2>Certifications</h2>
         <div class="cert-list">
           <p><span class="abbr">OSCP</span><span class="desc">OffSec Certified Professional</span></p>
+          <p><span class="abbr">GX-IH</span><span class="desc">GIAC Experienced Incident Handler</span></p>
           <p><span class="abbr">GCIH</span><span class="desc">GIAC Certified Incident Handler</span></p>
           <p><span class="abbr">GDSA</span><span class="desc">GIAC Defensible Security Architecture</span></p>
           <p><span class="abbr">GSTRT</span><span class="desc">GIAC Strategic Planning, Policy, and Leadership</span></p>
           <p><span class="abbr">GSEC</span><span class="desc">GIAC Security Essentials</span></p>
-          <p><span class="abbr">CySA+</span><span class="desc">Cybersecurity Analyst+</span></p>
         </div>
       </section>
 
