@@ -8,6 +8,41 @@
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="styles.css">
   <style>
+:root {
+  --bg: #f4f1ea;
+  --ink: #1a1815;
+  --muted: #6b6359;
+  --rule: #d4ccbc;
+  --accent: #2c4a3c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1815;
+    --ink: #ebe6dd;
+    --muted: #8d8678;
+    --rule: #3d3833;
+    --accent: #8eb39e;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { min-height: 100vh; }
+
+body {
+  font-family: "Iowan Old Style", "Hoefler Text", "Palatino Linotype", Palatino, Cambria, Georgia, serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 40px;
+}
     @media (max-width: 760px) {
       body { align-items: center; }
     }
